@@ -1,5 +1,3 @@
-% edited by Luise Zeckey, KTH
-
 function [solution]=MJanasch_MDF2_SolveLP(model,RT,n,m)%,beq)
 
 % Define Objective
