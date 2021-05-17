@@ -3,8 +3,6 @@
 % Markus Janasch, Ph.D. Student, KTH; edited by Luise Zeckey, KTH
 % Created: 2017-03-22, last modified: 2021-05-16
 
-%% Modified 2021-04-21
-
 Iterations = 1000;
 InputDataStructure = 'Expanded_Model.mat';
 MetConcSamplingData = 'Metabolite_Pool_Concentrations.txt';
