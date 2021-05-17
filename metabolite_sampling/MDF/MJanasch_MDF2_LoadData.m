@@ -1,5 +1,3 @@
-% edited by Luise Zeckey, KTH
-
 function model = MJanasch_MDF2_LoadData(fileName)
 
 %% Read in the excel file
@@ -28,7 +26,7 @@ mets            = data_raw.textdata.Metabolites(2:end,2);
 rxns            = model.reactions.rxns;
 
 S = zeros(numel(mets),numel(reaction_string));
-reaction_string=strrep(reaction_string,'+', '¤');
+reaction_string=strrep(reaction_string,'+', 'Â¤');
     
 % Loop through the reaction_string and add the info to the S matrix
 for i = 1:numel(reaction_string)
@@ -36,8 +34,8 @@ for i = 1:numel(reaction_string)
     arrowIndex = strfind(reaction_string{i},'<=>');
     
     % Split reactions into reactants and products
-    substrates  = regexp(reaction_string{i}(1:arrowIndex-1),'¤','split');
-    products    = regexp(reaction_string{i}(arrowIndex+3:end),'¤','split');
+    substrates  = regexp(reaction_string{i}(1:arrowIndex-1),'Â¤','split');
+    products    = regexp(reaction_string{i}(arrowIndex+3:end),'Â¤','split');
     
     % If the splitting character is at the end (if exchange rxns), then an
     % empty string will exist together with the real ones. Remove it
